@@ -78,10 +78,15 @@ Present findings in this format:
 - **Why:** [signals]
 - ...
 
-### Other learnings (for MEMORY.md)
-- [insights that aren't skill-worthy but worth remembering]
+### Project-level learnings (for project MEMORY.md)
 - [project-specific conventions discovered]
-- [gotchas encountered]
+- [project-specific gotchas encountered]
+- [patterns tied to this codebase's architecture or domain]
+
+### General learnings (for ~/.claude/MEMORY.md)
+- [language/tool gotchas applicable across projects]
+- [reusable techniques or best practices discovered]
+- [insights about tools, libraries, or APIs]
 ```
 
 ### 5. Create Skills (with permission)
@@ -101,10 +106,19 @@ If approved, create each skill at `~/.claude/skills/<name>/SKILL.md` with:
 
 ### 6. Update Memory
 
-Append session learnings to the project's MEMORY.md:
-- New patterns discovered
-- Gotchas encountered
-- Project conventions clarified
+Classify each learning and write to the appropriate MEMORY.md:
+
+**Project-level → `<project-root>/MEMORY.md`**
+- Conventions specific to this codebase (naming, ordering, architecture)
+- Domain-specific gotchas (e.g., pattern priority rules for this PII sanitizer)
+- Project-specific configuration or workflow notes
+
+**General-level → `~/.claude/MEMORY.md`**
+- Language or tool gotchas applicable across any project (e.g., JS regex alternation)
+- Reusable techniques or best practices
+- Insights about libraries, APIs, or tools
+
+Ask the user before writing if the classification is ambiguous.
 
 ## Skill Creation Checklist
 
